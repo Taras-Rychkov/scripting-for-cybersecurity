@@ -1,1 +1,1 @@
-# scripting-for-cyber-security
+# scripting-for-cybersecurity
