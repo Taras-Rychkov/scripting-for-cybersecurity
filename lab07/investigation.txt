@@ -63,3 +63,35 @@ Exit code: 3
 === (empty) ===
 Error: no username entered
 Exit code: 1
+
+=== Answers ===
+
+1. None of the targeted usernames (admin, root, backup, oracle) are current
+   accounts. All current accounts (alice, bob, eve, david) had 0 failed logins.
+   This suggests the attacker did not know the real user list and was guessing
+   common, default or generic account names from a wordlist.
+
+2. admin, root and backup are LEGACY accounts found only in the old backup list.
+   If they still existed, root would be the most dangerous because it has full
+   control of the system. admin is also dangerous because it is probably a
+   privileged account, and it received the most attempts (17, HIGH risk).
+
+3. No. The disabled account david had 0 accepted logins, and there were no
+   accepted logins from any external (non-192.168.) address. This suggests the
+   password-guessing attack against SSH did not succeed in this log. It does NOT
+   prove the system was not compromised: the attacker could have used other
+   methods (e.g. stolen credentials from an internal machine, SSH keys, another
+   service), and the log may be incomplete or could have been tampered with.
+
+4. alice and bob both have plaintext credentials in passwords.txt and successful
+   logins. alice logged in from 4 different internal addresses
+   (192.168.1.55, 192.168.1.35, 192.168.1.40, 192.168.1.20).
+   bob logged in from 3 different internal address(es) (192.168.1.20 192.168.1.35 192.168.1.40 ).
+   This combination is worth reporting because anyone who read the passwords
+   file could log in as these users, and logins from several machines may mean
+   the credentials are being used by someone other than the owner (lateral
+   movement). Their passwords should be reset and the file removed.
+   Note: alice and bob logged in from three of the same machines
+   (192.168.1.20, 192.168.1.35, 192.168.1.40). Two different accounts being
+   used from the same hosts supports the idea that one person is using both
+   sets of credentials from passwords.txt.
