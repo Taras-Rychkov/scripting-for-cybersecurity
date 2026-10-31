@@ -1,0 +1,65 @@
+Lab 7 Investigation - Taras Rychkov C00319481
+
+=== alice ===
+alice: CURRENT account (role: student, status: active)
+Failed logins:   0
+Accepted logins: 6
+Risk: NONE
+WARNING: alice has accepted logins AND plaintext credentials in passwords.txt
+Exit code: 0
+=== bob ===
+bob: CURRENT account (role: student, status: active)
+Failed logins:   0
+Accepted logins: 5
+Risk: NONE
+WARNING: bob has accepted logins AND plaintext credentials in passwords.txt
+Exit code: 0
+=== eve ===
+eve: CURRENT account (role: staff, status: active)
+Failed logins:   0
+Accepted logins: 3
+Risk: NONE
+Exit code: 0
+=== david ===
+david: CURRENT account (role: student, status: disabled)
+Failed logins:   0
+Accepted logins: 0
+Risk: NONE
+Exit code: 0
+=== admin ===
+admin: LEGACY account (only in the old backup list)
+Failed logins:   17
+Accepted logins: 0
+Risk: HIGH
+WARNING: LEGACY account admin was targeted by 17 failed login(s) - attacker is guessing account names
+Exit code: 2
+=== root ===
+root: LEGACY account (only in the old backup list)
+Failed logins:   10
+Accepted logins: 0
+Risk: MEDIUM
+WARNING: LEGACY account root was targeted by 10 failed login(s) - attacker is guessing account names
+Exit code: 2
+=== backup ===
+backup: LEGACY account (only in the old backup list)
+Failed logins:   4
+Accepted logins: 0
+Risk: LOW
+WARNING: LEGACY account backup was targeted by 4 failed login(s) - attacker is guessing account names
+Exit code: 2
+=== oracle ===
+oracle: UNKNOWN account (in neither list)
+Failed logins:   3
+Accepted logins: 0
+Risk: LOW
+WARNING: UNKNOWN account oracle was targeted by 3 failed login(s) - attacker is guessing account names
+Exit code: 3
+=== nobody ===
+nobody: UNKNOWN account (in neither list)
+Failed logins:   0
+Accepted logins: 0
+Risk: NONE
+Exit code: 3
+=== (empty) ===
+Error: no username entered
+Exit code: 1
