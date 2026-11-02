@@ -1,0 +1,106 @@
+A1: 28
+A2: exam-data/case/evidence/empty.bin
+A3: suspicious.dat is an unknown class 154
+A4: 45
+A5: 15 203.0.113.10; 14 198.51.100.24; 8 198.51.100.77
+A6: 44 200; 15 403; 11 404; 6 302; 4 500
+A7: david; frank; heidi 
+A8: 1 exam-data/case/nested/archive/old.log; 60 exam-data/case/logs/auth.log; 5 exam-data/case/logs/firewall.log; 80 exam-data/case/logs/access.log; 184 exam-data/intel/auth.log; 220 exam-data/intel/access.log; 550 total
+
+B1::
+auth.log: 
+File     : exam-data/case/logs/auth.log
+Lines    : 60
+Failed   : 45
+Accepted : 15
+First    : Sep 20 08:00:20
+Last     : Sep 20 08:46:20
+---------
+empty.bin:
+./logsummary.sh: line 17: $2: ambiguous redirect
+---------
+file name that does not exist, and with no arguments:
+./logsummary.sh: line 12: $2: ambiguous redirect
+---------
+echo $?:
+nothing
+_________
+B2::
+IP      : 203.0.113.10
+Failed    : 15
+Accepted  : 0
+Risk      : HIGH
+IOC : yes
+BLOCK 203.0.113.10 -> 10.0.0.10:22
+---------
+IP      : 198.51.100.77
+Failed    : 8
+Accepted  : 0
+Risk      : MEDIUM
+IOC : no
+Firewall: no entries
+---------
+IP      : 192.168.1.20
+Failed    : 0
+Accepted  : 6
+./check_ip.sh: line 35: RISK_NONE: command not found
+Risk      : 
+IOC : no
+ALLOW 192.168.1.20 -> 10.0.0.10:443
+---------
+IP      : 203.0.113.1
+Failed    : 0
+Accepted  : 0
+Risk      : NONE
+IOC : no
+Firewall: no entries
+---------
+abc:
+./check_ip.sh: line 12: $2: ambiguous redirect
+_________
+B2(q)::
+IP      : 203.0.113.10
+Failed    : 15
+Accepted  : 0
+Risk      : HIGH
+IOC : yes
+BLOCK 203.0.113.10 -> 10.0.0.10:22
+_-_-_-_-_
+IP      : 198.51.100.77
+Failed    : 8
+Accepted  : 0
+Risk      : MEDIUM
+IOC : no
+Firewall: no entries
+---------
+The ip 203.0.113.10 is more dangereous because there was 15 failed attempts to login and the "RISK" is High so the ip 203.0.113.10 has bigger gap in the server's defences"
+_________
+B3::
+=== IOC sweep ===
+IOC | access.log | 21 lines
+IOC | auth.log | 15 lines
+IOC | firewall.log | 1 lines
+203.0.113.10 seen in 3 log(s)
+IOC | access.log | 19 lines
+IOC | auth.log | 14 lines
+IOC | firewall.log | 1 lines
+198.51.100.24 seen in 3 log(s)
+malicious.example seen in 0 log(s)
+bad-login.example seen in 0 log(s)
+44d88612fea8a8f36de82e1278abb02f seen in 0 log(s)
+IOC | auth.log | 5 lines
+IOC | firewall.log | 1 lines
+203.0.113.200 seen in 2 log(s)
+suspicious.example seen in 0 log(s)
+Total matching lines: 77
+=== Hash check ===
+clean : exam-data/case/evidence/archive.zip
+clean : exam-data/case/evidence/empty.bin
+clean : exam-data/case/evidence/image.png
+clean : exam-data/case/evidence/notes.txt
+clean : exam-data/case/evidence/passwords.txt
+clean : exam-data/case/evidence/readme.md
+clean : exam-data/case/evidence/suspicious.dat
+_________
+B3(q)::
+d41d8cd98f00b204e9800998ecf8427e  exam-data/case/evidence/empty.bin
