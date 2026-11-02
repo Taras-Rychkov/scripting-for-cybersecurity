@@ -708,4 +708,56 @@ fatal: unable to access 'https://github.com/robustness/Test1.git/': The requeste
 [?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m~/Test1 [0;36m([1;31mmain[0;36m) [0m$ cd[K[Kls
 [?2004l'$'   3   answers.txt   [0m[01;32mcheck_ip.sh[0m   [01;34mexam-data[0m   [01;32mlogsummary.sh[0m   readme.md   [01;32msweep.sh[0m
 [?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m~/Test1 [0;36m([1;31mmain[0;36m) [0m$ ls[Klspwdcp ~/Test1 /workspaces/scripting-for-cyber-security/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@~[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Pgit push origin main[3Ph auth setup-gitlogin --hostname github.com --git-protocol https --web[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd -[Kgh auth login --hostname github.com --git-protocol https --web[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd -[K/workspaces/scripting-for-cyber-security/
-[?2004l[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgit
+[?2004l[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgit config pull.rebase false[27mgit config pull.rebase false
+[?2004l[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgit config pull.rebase true[27mgit config pull.rebase true
+[?2004l[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgit config pull.ff only[27mgit config pull.ff only
+[?2004l[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgit commit -m "Add Test1 files"[27mgit commit -m "Add Test1 files"
+[?2004l[main 8374c68] Add Test1 files
+ 36 files changed, 852 insertions(+), 1 deletion(-)
+ delete mode 160000 Test1
+ create mode 100644 Test1/$
+ create mode 100644 Test1/3
+ create mode 100644 Test1/answers.txt
+ create mode 100755 Test1/check_ip.sh
+ create mode 100644 Test1/exam-data/case/backups/config.old
+ create mode 100644 Test1/exam-data/case/backups/users.old
+ create mode 100644 Test1/exam-data/case/config-new.txt
+ create mode 100644 Test1/exam-data/case/config-old.txt
+ create mode 100644 Test1/exam-data/case/configs/app.conf
+ create mode 100644 Test1/exam-data/case/configs/backup.conf
+ create mode 100644 Test1/exam-data/case/configs/server.conf
+ create mode 100644 Test1/exam-data/case/docs/inventory.txt
+ create mode 100644 Test1/exam-data/case/evidence/archive.zip
+ create mode 100644 Test1/exam-data/case/evidence/empty.bin
+ create mode 100644 Test1/exam-data/case/evidence/image.png
+ create mode 100644 Test1/exam-data/case/evidence/notes.txt
+ create mode 100644 Test1/exam-data/case/evidence/passwords.txt
+ create mode 100644 Test1/exam-data/case/evidence/readme.md
+ create mode 100644 Test1/exam-data/case/evidence/suspicious.dat
+ create mode 100644 Test1/exam-data/case/hello.sh
+ create mode 100644 Test1/exam-data/case/logs/access.log
+ create mode 100644 Test1/exam-data/case/logs/auth.log
+ create mode 100644 Test1/exam-data/case/logs/firewall.log
+ create mode 100644 Test1/exam-data/case/nested/archive/old.log
+ create mode 100644 Test1/exam-data/case/scripts/check.sh
+ create mode 100644 Test1/exam-data/case/scripts/report.py
+ create mode 100644 Test1/exam-data/case/scripts/scan.py
+ create mode 100644 Test1/exam-data/case/windows.sh
+ create mode 100644 Test1/exam-data/intel/access.log
+ create mode 100644 Test1/exam-data/intel/auth.log
+ create mode 100644 Test1/exam-data/intel/iocs.txt
+ create mode 100644 Test1/exam-data/intel/users.csv
+ create mode 100755 Test1/logsummary.sh
+ create mode 100644 Test1/readme.md
+ create mode 100755 Test1/sweep.sh
+[?2004h[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ [7mgh auth login --hostname github.com --git-protocol https --web[27m
+[7mgh auth setup-git[27m
+[7mgit fetch origin[27m
+[7mgit rebase origin/main[27m
+[7mgit push origin main[27m[A[A[A[A[0;32m@Taras-Rychkov [0m➜ [1;34m/workspaces/scripting-for-cyber-security [0;36m([1;31mmain[0;36m) [0m$ gh auth login --hostname github.com --git-protocol https --web
+gh auth setup-git
+git fetch origin
+git rebase origin/main
+git push origin main
+[?2004l]11;?\[6nThe value of the GITHUB_TOKEN environment variable is being used for authentication.
+To have GitHub CLI store credentials instead
